@@ -80,7 +80,7 @@ class Entity(pygame.sprite.Sprite):
                 for file_name in sorted(folder[2], key=lambda string: int(string.split('.')[0])):
                     path = folder[0] + '/' + file_name
                     surf = pygame.image.load(path).convert_alpha()
-                    key = folder[0].split('/')[-1]
+                    key = folder[0].split('\\')[-1]
                     self.animations[key].append(surf)
 
     def move(self, dt):
